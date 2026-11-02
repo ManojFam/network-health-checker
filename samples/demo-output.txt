@@ -1,0 +1,14 @@
+$ netcheck check examples/demo-public.yaml --csv samples/demo-report.csv --html samples/demo-report.html
+STATUS    NAME                   HOST        PING   PORTS
+--------  ---------------------  ----------  -----  -------------------
+UP        Cloudflare DNS *       1.1.1.1     20 ms  open 53,443
+UP        Google DNS *           8.8.8.8     13 ms  open 53,443
+DEGRADED  Cloudflare DNS (SSH)   1.1.1.1     13 ms  open 443; closed 22
+DOWN      Old printer (offline)  192.0.2.50  -      closed 9100
+
+4 device(s): 2 UP, 1 DEGRADED, 1 DOWN
+CSV report:  samples/demo-report.csv
+HTML report: samples/demo-report.html
+
+$ echo $?
+1

@@ -1,0 +1,5 @@
+name,host,type,critical,status,ping,latency_ms,open_ports,closed_ports,checked_at
+Cloudflare DNS,1.1.1.1,dns,yes,UP,reply,20,53 443,,2026-11-03T10:13:42+11:00
+Google DNS,8.8.8.8,dns,yes,UP,reply,13,53 443,,2026-11-03T10:13:42+11:00
+Cloudflare DNS (SSH),1.1.1.1,dns,no,DEGRADED,reply,13,443,22,2026-11-03T10:13:43+11:00
+Old printer (offline),192.0.2.50,printer,no,DOWN,no reply,,,9100,2026-11-03T10:13:44+11:00
