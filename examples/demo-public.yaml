@@ -1,0 +1,24 @@
+# Public hosts that anyone can check, used for the sample output in the README.
+# 192.0.2.0/24 is reserved for documentation (RFC 5737) and never answers.
+devices:
+  - name: Cloudflare DNS
+    host: 1.1.1.1
+    type: dns
+    ports: [53, 443]
+    critical: true
+
+  - name: Google DNS
+    host: 8.8.8.8
+    type: dns
+    ports: [53, 443]
+    critical: true
+
+  - name: Cloudflare DNS (SSH)
+    host: 1.1.1.1
+    type: dns
+    ports: [443, 22]
+
+  - name: Old printer (offline)
+    host: 192.0.2.50
+    type: printer
+    ports: [9100]

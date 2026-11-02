@@ -1,0 +1,39 @@
+# Example device list for a small office. Replace the hosts with your own.
+#   name      shown in the reports (defaults to the host)
+#   host      IP address or DNS name
+#   type      free text: switch, server, printer, ...
+#   ports     TCP ports that should be open
+#   critical  true = a DOWN result makes `netcheck check` exit with 2 (CRITICAL)
+devices:
+  - name: Core switch
+    host: 192.168.1.2
+    type: switch
+    ports: [22, 443]
+    critical: true
+
+  - name: Domain controller
+    host: 192.168.1.10
+    type: server
+    ports: [53, 88, 389, 445]
+    critical: true
+
+  - name: File server
+    host: 192.168.1.11
+    type: server
+    ports: [445, 3389]
+    critical: true
+
+  - name: Wi-Fi controller
+    host: 192.168.1.20
+    type: wireless
+    ports: [443]
+
+  - name: Reception printer
+    host: 192.168.1.50
+    type: printer
+    ports: [9100, 80]
+
+  - name: CCTV recorder
+    host: 192.168.1.60
+    type: nvr
+    ports: [80, 554]

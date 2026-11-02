@@ -1,0 +1,4 @@
+name,host,type,ports,critical
+Core switch,192.168.1.2,switch,22;443,yes
+File server,192.168.1.11,server,445;3389,yes
+Reception printer,192.168.1.50,printer,9100;80,no
